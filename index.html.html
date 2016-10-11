@@ -25,7 +25,10 @@
         #box2 {width:100vw;
             height:300px;
     
-        background-color: bisque;}
+        background-color: bisque;
+        background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto;}
        
         .profile {width: 15%;
         position:absolute;
@@ -33,6 +36,7 @@
         
             bottom:50px;
             left:650px;
+            
         }
         .name {position:relative;
         left:650px;
@@ -205,7 +209,30 @@
         <div class = 'box5'><h3 class ='text1'>Thankyou!</h3></div>
         
        
+       
+        <script>
+            var pic = document.getElementsByClassName("pic")[0];
+            var pic1 = document.getElementsByClassName("pic1")[0];
+            var pic2 = document.getElementsByClassName("pic2")[0];
+            var pic3 = document.getElementsByClassName("pic3")[0];
+            var box2 = document.getElementById("box2");
+                        
+         pic.onclick = function(){
+             box2.style.backgroundImage= "url("+pic.src+")";
+         }
+         pic1.onclick = function(){
+             box2.style.backgroundImage= "url("+pic1.src+")";
+         }
+            pic2.onclick = function(){
+             box2.style.backgroundImage= "url("+pic2.src+")";
+         }
+           pic3.onclick = function(){
+             box2.style.backgroundImage= "url("+pic3.src+")";
+           }
         
+        
+        
+        </script>
         
     
     </body>
